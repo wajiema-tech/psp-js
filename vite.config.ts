@@ -13,6 +13,8 @@ export default defineConfig({
     exclude: ["@ffmpeg/ffmpeg", "@ffmpeg/util", "libav.js"],
   },
   server: {
+    // Allow Vercel preview hosts (e.g. *.vercel.run) in hosted dev environments.
+    allowedHosts: [".vercel.run"],
     hmr: false,
     headers: {
       "Cross-Origin-Opener-Policy": "same-origin",
