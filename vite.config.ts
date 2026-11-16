@@ -14,7 +14,9 @@ export default defineConfig({
   },
   server: {
     // Allow Vercel preview hosts (e.g. *.vercel.run) in hosted dev environments.
-    allowedHosts: [".vercel.run"],
+    // Keep the current v0 host explicit as well, so it remains allowed even if
+    // this environment's Vite host matching does not honor the wildcard entry.
+    allowedHosts: [".vercel.run", "sb-6zepfy61p9ap.vercel.run"],
     hmr: false,
     headers: {
       "Cross-Origin-Opener-Policy": "same-origin",
